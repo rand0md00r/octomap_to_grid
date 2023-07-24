@@ -1,0 +1,12 @@
+<launch>
+
+  <node pkg="octomap_converter_pkg"  type="octomap_converter" name="octomap_converter_node"> 
+    <param name="min_height"  value="0.5" />
+    <param name="max_height"  value="1.0" />
+
+    <remap from="/octomap_full"    to="/octomap_binary" />
+    <remap from="/convert_map"    to="/convert_map" />
+
+  </node>
+ 
+</launch>
